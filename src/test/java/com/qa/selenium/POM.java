@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class BingPage {
+public class POM {
 	
 	@FindBy(how = How.NAME, using = "q")
 	private WebElement searchBox;
@@ -35,7 +35,7 @@ public class BingPage {
 	@Test
 	public void test() {
 		driver.get("http://www.bing.com/");
-		BingPage page = PageFactory.initElements(driver, BingPage.class);
+		POM page = PageFactory.initElements(driver, POM.class);
 		page.searchFor("Muse");
 	}
 
