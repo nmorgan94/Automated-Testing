@@ -13,11 +13,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 
-import com.qa.selenium.ActionsTest.Browser;
 
 public class ResizeTest{
 	
-
+	SeleniumUtils utils = new SeleniumUtils();
 	
 	WebDriver driver;
 	
@@ -25,25 +24,12 @@ public class ResizeTest{
 
 	String URL = "http://demoqa.com/resizable/";
 	
-	public enum Browser {
-	    CHROME,
-	    FIREFOX
-	}
-	
-	Browser browser = Browser.FIREFOX;
+
+
 
 	@Before
 	public void setUp() {
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, 0);
-	
-		switch (browser) {
-	    case CHROME   : System.setProperty("webdriver.chrome.driver", "C:/Development/chromedriver.exe");
-						driver = new ChromeDriver();
-						break;
-	    case FIREFOX : 	System.setProperty("webdriver.gecko.driver", "C:/Development/geckodriver.exe");
-						driver = new FirefoxDriver(); 
-						break;
-		}
+		driver = utils.setDriver("FIREFOX");
 		action = new Actions(driver);
 	}
 	

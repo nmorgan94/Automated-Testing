@@ -13,7 +13,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 
-import com.qa.selenium.ActionsTest.Browser;
+
 
 public class DropableTest{
 	

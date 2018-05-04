@@ -14,12 +14,13 @@ import org.openqa.selenium.support.PageFactory;
 
 
 
-public class DraggableTest{
+
+public class SortableTest{
 	
 	SeleniumUtils utils = new SeleniumUtils();
 	WebDriver driver;
 	Actions action;
-	String URL = "http://demoqa.com/draggable/";
+	String URL = "http://demoqa.com/sortable/";
 	
 	@Before
 	public void setUp() {
@@ -36,8 +37,8 @@ public class DraggableTest{
 	@Test
 	public void test() throws InterruptedException {
 		driver.get(URL);
-		Draggable page = PageFactory.initElements(driver, Draggable.class);
-		page.drag(action);
+		Sortable page = PageFactory.initElements(driver, Sortable.class);
+		page.sort(action);
 		Thread.sleep(3000);
 	}
 
